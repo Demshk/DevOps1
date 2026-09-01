@@ -1,3 +1,4 @@
+print("FILEN KÖRS")
 
 def add(a, b):
     """Adderar två olika tal"""
@@ -17,6 +18,11 @@ def divide(a, b):
         raise ValueError("Kan inte dividera med noll")
     return a / b
 
+def square_root(a):
+    if a < 1:
+        raise ValueError("Går ej")
+    return a ** 0.5
+
 
 def main():
     import sys
@@ -35,15 +41,18 @@ def main():
         "subtract": subtract,
         "multiply": multiply,
         "divide": divide,
+        "sqrt": square_root,
     }
 
     if operation not in operations:
         print(f"Okänd operation: {operation}")
         sys.exit(1)
 
-    result = operations[operation](a, b)
+    if  operation == "sqrt":
+         result = square_root(a)
+    else:
+        result = operations[operation](a, b)
     print(result)
-
 
 if __name__ == "__main__":
     main()
