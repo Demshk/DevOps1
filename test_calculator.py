@@ -1,4 +1,4 @@
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, square_root
 import pytest
 
 
@@ -17,3 +17,7 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(10, 0)
+
+def test_square_root():
+    with pytest.raises(ValueError):
+        square_root(0)
