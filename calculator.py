@@ -1,13 +1,18 @@
+
 def add(a, b):
+    """Adderar två olika tal"""
     return a + b
 
 def subtract(a, b):
+    """Subtraherar två olika tal"""
     return a - b
 
 def multiply(a, b):
+    """Multiplicerar två olika tal"""
     return a * b
 
 def divide(a, b):
+    """Dividerar två olika tal"""
     if b == 0:
         raise ValueError("Kan inte dividera med noll")
     return a / b
